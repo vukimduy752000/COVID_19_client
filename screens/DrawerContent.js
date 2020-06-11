@@ -17,12 +17,7 @@ import {
 export function DrawerContent(props) {
 
     const { signOut } = React.useContext(AuthenticationContext)
-    //haven't done the logic yet
-    // const [isDarkTheme, changeToDarkTheme] = React.useState(false); 
-    //toggle the button to change theme
-    const changeTheme = () => (
-        changeToDarkTheme(!isDarkTheme)
-    )
+    
     return (
         <View style={{ flex: 1 }}>
             <DrawerContentScrollView {...props}>
@@ -31,7 +26,7 @@ export function DrawerContent(props) {
                         <View style={styles.avatar}>
                             <Avatar.Image
                                 source={{
-                                    uri: 'https://lh3.googleusercontent.com/proxy/_bUgYhyqINaZSRcrs-ovlS2qZMSOqORpMHxF5ja53FPs3CTuPIdppvIFI7rH2Je15rOF1V3BhRBjh3CgI08b0aAKbD99Fgs7YblXz182oPkGC5o2LKwbKA'
+                                    uri: 'https://reactnative.dev/img/tiny_logo.png'
                                 }}
                                 size={50} />
                             <View style={{ marginLeft: 15, flexDirection: "column" }}>

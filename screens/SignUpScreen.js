@@ -48,7 +48,7 @@ const SignUpScreen = ({ navigation }) => {
                 <View style={styles.logo}>
                     <Avatar.Image
                         size={300}
-                        source={require('../images/logo.png')} />
+                        source={require('../images/logoLogin.jpg')} />
                 </View>
 
                 <View style={styles.body}>

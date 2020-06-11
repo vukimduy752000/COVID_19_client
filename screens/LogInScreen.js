@@ -67,7 +67,7 @@ const LogInScreen = ({ navigation }) => {
                 <View style={styles.logo}>
                     <Avatar.Image
                         size={300}
-                        source={require('../images/logo.png')} />
+                        source={require('../images/logoLogin.jpg')} />
                 </View>
 
                 <View style={styles.body}>
@@ -81,7 +81,7 @@ const LogInScreen = ({ navigation }) => {
 
                     <TextInput style={{ marginBottom: 50, backgroundColor: '#fff' }}
                         label="Password"
-                        secureTextEntry="true"
+                        secureTextEntry= "true"
                         placeholder="Type your Password"
                         autoCapitalize="none"
                         onChangeText={val => handlePasswordChange(val)}

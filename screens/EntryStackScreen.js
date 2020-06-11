@@ -12,7 +12,6 @@ import { createStackNavigator } from '@react-navigation/stack'
 import LogInScreen from './LogInScreen'
 import SignUpScreen from './SignUpScreen'
 
-
 const EntryStack = createStackNavigator();
 
 const EntryStackScreen = ({ navigation }) => {

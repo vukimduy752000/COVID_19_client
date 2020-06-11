@@ -1,5 +1,6 @@
 import React from 'react';
-
+import { Image } from 'react-native';
+import LinearGradient from 'react-native-linear-gradient';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 
@@ -10,6 +11,7 @@ import ExploreScreen from './ExploreScreen'
 import HomeScreen from './HomeScreen'
 import ProfileScreen from './ProfileScreen'
 import SettingScreen from './SettingScreen'
+import { Avatar } from 'react-native-paper';
 
 
 const HomeStack = createStackNavigator();
@@ -30,7 +32,7 @@ const TabBar = () => {
         component={HomeStackScreen}
         options={{
           tabBarLabel: 'Home',
-          tabBarColor: "#694fad",
+          tabBarColor: "#0377a8",
           tabBarIcon: ({ color }) => (
             <Icon name='ios-home' color={color} size={26} />
           ),
@@ -42,7 +44,7 @@ const TabBar = () => {
         component={ProfileStackScreen}
         options={{
           tabBarLabel: 'Profile',
-          tabBarColor: '#d02860',
+          tabBarColor: '#118fb0',
           tabBarIcon: ({ color }) => (
             <Icon name='ios-person' color={color} size={26} />
           )
@@ -54,7 +56,7 @@ const TabBar = () => {
         component={ExploreStackScreen}
         options={{
           tabBarLabel: 'Explore',
-          tabBarColor: '#009387',
+          tabBarColor: '#1fa6b8',
           tabBarIcon: ({ color }) => (
             <Icon name='ios-eye' color={color} size={26} />
           )
@@ -65,7 +67,7 @@ const TabBar = () => {
         component={SettingStackScreen}
         options={{
           tabBarLabel: 'Setting',
-          tabBarColor: '#1f65ff',
+          tabBarColor: '#2fb5c7',
           tabBarIcon: ({ color }) => (
             <Icon name='ios-settings' color={color} size={26} />
           )
@@ -78,13 +80,18 @@ const TabBar = () => {
 const SettingStackScreen = ({ navigation }) => {
   return (
     <SettingStack.Navigator screenOptions={{
-      headerStyle: {
-        backgroundColor: '#1f65ff',
-      },
       headerTintColor: '#fff',
       headerTitleStyle: {
         fontWeight: 'bold'
       },
+      headerBackground: () => (
+        <LinearGradient
+          colors={['#0377a8', '#2fb5c7']}
+          style={{ flex: 1 }}
+          start={{ x: 0, y: 0 }}
+          end={{ x: 1, y: 0 }}
+        />
+      ),
     }}>
       <SettingStack.Screen name="Setting" component={SettingScreen}
         options={{
@@ -92,7 +99,7 @@ const SettingStackScreen = ({ navigation }) => {
           headerLeft: () => (
             <Icon.Button
               name='ios-menu'
-              backgroundColor='#1f65ff'
+              backgroundColor='transparent'
               size={25}
               onPress={() => navigation.openDrawer()} />
           )
@@ -106,20 +113,25 @@ const SettingStackScreen = ({ navigation }) => {
 const HomeStackScreen = ({ navigation }) => {
   return (
     <HomeStack.Navigator screenOptions={{
-      headerStyle: {
-        backgroundColor: '#694fad',
-      },
       headerTintColor: '#fff',
       headerTitleStyle: {
         fontWeight: 'bold'
       },
+      headerBackground: () => (
+        <LinearGradient
+          colors={['#0377a8', '#2fb5c7']}
+          style={{ flex: 1 }}
+          start={{ x: 0, y: 0 }}
+          end={{ x: 1, y: 0 }}
+        />
+      ),
     }}>
       <HomeStack.Screen name="HomeScreen" component={HomeScreen} options={{
-        title: 'Overview',
+        title: '',
         headerLeft: () => (
           <Icon.Button name="ios-menu"
             size={25}
-            backgroundColor="#694fad"
+            backgroundColor="transparent"
             onPress={() => (navigation.openDrawer())} />
         )
       }} />
@@ -131,18 +143,26 @@ const ProfileStackScreen = ({ navigation }) => {
   return (
     <ProfileStack.Navigator screenOptions={{
       headerStyle: {
-        backgroundColor: '#d02860',
+        backgroundColor: '#0077b6',
       },
       headerTintColor: '#fff',
       headerTitleStyle: {
         fontWeight: 'bold'
       },
+      headerBackground: () => (
+        <LinearGradient
+          colors={['#0377a8', '#2fb5c7']}
+          style={{ flex: 1 }}
+          start={{ x: 0, y: 0 }}
+          end={{ x: 1, y: 0 }}
+        />
+      ),
     }}>
       <ProfileStack.Screen name="ProfileScreen" component={ProfileScreen} options={{
         title: 'Profile',
         headerLeft: () => (
           <Icon.Button name="ios-menu" size={25}
-            backgroundColor="#d02860"
+            backgroundColor="transparent"
             onPress={() => (navigation.openDrawer())} />
         )
       }} />
@@ -153,13 +173,18 @@ const ProfileStackScreen = ({ navigation }) => {
 const ExploreStackScreen = ({ navigation }) => {
   return (
     <ExploreStack.Navigator screenOptions={{
-      headerStyle: {
-        backgroundColor: '#009387',
-      },
       headerTintColor: '#fff',
       headerTitleStyle: {
         fontWeight: 'bold'
-      }
+      },
+      headerBackground: () => (
+        <LinearGradient
+          colors={['#0377a8', '#2fb5c7']}
+          style={{ flex: 1 }}
+          start={{ x: 0, y: 0 }}
+          end={{ x: 1, y: 0 }}
+        />
+      ),
     }}>
       <ExploreStack.Screen
         name="ExploreScreen" component={ExploreScreen}
@@ -169,7 +194,7 @@ const ExploreStackScreen = ({ navigation }) => {
             <Icon.Button
               name="ios-menu"
               size={25}
-              backgroundColor="#009387"
+              backgroundColor="transparent"
               onPress={() => navigation.openDrawer()} />
           )
         }}
