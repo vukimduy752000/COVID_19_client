@@ -10,8 +10,8 @@ import {
 } from 'react-native'
 import { TextInput, Avatar, Button } from 'react-native-paper'
 import { AuthenticationContext } from '../components/context'
-import Users from './Users'
-
+import Users from './DataSource/Users'
+import LinearGradient from'react-native-linear-gradient'
 
 const LogInScreen = ({ navigation }) => {
     const [userData, setUserData] = useState({
@@ -63,6 +63,7 @@ const LogInScreen = ({ navigation }) => {
     return (
         //dismiss the keyboard
         <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
+            
             <View style={styles.container}>
                 <View style={styles.logo}>
                     <Avatar.Image

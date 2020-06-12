@@ -57,7 +57,9 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         fontSize: 22,
         borderRadius: 10,
-        borderWidth: 3
+        borderWidth: 1,
+        backgroundColor: '#fff',
+        overflow: "hidden"
     }
 
 });

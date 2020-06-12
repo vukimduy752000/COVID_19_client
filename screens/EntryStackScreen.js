@@ -9,7 +9,7 @@ import {
 } from 'react-native'
 
 import { createStackNavigator } from '@react-navigation/stack'
-import LogInScreen from './LogInScreen'
+import LogInScreen from './LoginScreen'
 import SignUpScreen from './SignUpScreen'
 
 const EntryStack = createStackNavigator();

@@ -9,13 +9,15 @@ import Icon from 'react-native-vector-icons/Ionicons'
 
 import ExploreScreen from './ExploreScreen'
 import HomeScreen from './HomeScreen'
-import ProfileScreen from './ProfileScreen'
+import InstructionScreen from './InstructionScreen'
 import SettingScreen from './SettingScreen'
+import DetailScreen from './DetailScreen'
+
 import { Avatar } from 'react-native-paper';
 
 
 const HomeStack = createStackNavigator();
-const ProfileStack = createStackNavigator();
+const InstructionStack = createStackNavigator();
 const ExploreStack = createStackNavigator();
 const SettingStack = createStackNavigator();
 
@@ -40,13 +42,13 @@ const TabBar = () => {
       />
 
       <Tab.Screen
-        name="ProfileScreen"
-        component={ProfileStackScreen}
+        name="InstructionScreen"
+        component={InstructionStackScreen}
         options={{
-          tabBarLabel: 'Profile',
+          tabBarLabel: 'Safety',
           tabBarColor: '#118fb0',
           tabBarIcon: ({ color }) => (
-            <Icon name='ios-person' color={color} size={26} />
+            <Icon name='ios-thumbs-up' color={color} size={26} />
           )
         }}
       />
@@ -95,7 +97,7 @@ const SettingStackScreen = ({ navigation }) => {
     }}>
       <SettingStack.Screen name="Setting" component={SettingScreen}
         options={{
-          title: 'Setting',
+          title: '',
           headerLeft: () => (
             <Icon.Button
               name='ios-menu'
@@ -139,9 +141,9 @@ const HomeStackScreen = ({ navigation }) => {
   )
 }
 
-const ProfileStackScreen = ({ navigation }) => {
+const InstructionStackScreen = ({ navigation }) => {
   return (
-    <ProfileStack.Navigator screenOptions={{
+    <InstructionStack.Navigator screenOptions={{
       headerStyle: {
         backgroundColor: '#0077b6',
       },
@@ -158,15 +160,15 @@ const ProfileStackScreen = ({ navigation }) => {
         />
       ),
     }}>
-      <ProfileStack.Screen name="ProfileScreen" component={ProfileScreen} options={{
-        title: 'Profile',
+      <InstructionStack.Screen name="ProfileScreen" component={ProfileScreen} options={{
+        title: '',
         headerLeft: () => (
           <Icon.Button name="ios-menu" size={25}
             backgroundColor="transparent"
             onPress={() => (navigation.openDrawer())} />
         )
       }} />
-    </ProfileStack.Navigator>
+    </InstructionStack.Navigator>
   )
 }
 
@@ -189,7 +191,7 @@ const ExploreStackScreen = ({ navigation }) => {
       <ExploreStack.Screen
         name="ExploreScreen" component={ExploreScreen}
         options={{
-          title: 'Explore',
+          title: '',
           headerLeft: () => (
             <Icon.Button
               name="ios-menu"
@@ -198,6 +200,9 @@ const ExploreStackScreen = ({ navigation }) => {
               onPress={() => navigation.openDrawer()} />
           )
         }}
+      ></ExploreStack.Screen>
+      <ExploreStack.Screen
+        name="DetailScreen" component={DetailScreen}
       ></ExploreStack.Screen>
     </ExploreStack.Navigator>
   )

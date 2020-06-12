@@ -1,4 +1,4 @@
-import React, { userState } from 'react';
+import React, { userState, useEffect } from 'react';
 import { View, Text, StyleSheet } from 'react-native'
 import { DrawerContentScrollView, DrawerItem } from '@react-navigation/drawer';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
@@ -17,7 +17,7 @@ import {
 export function DrawerContent(props) {
 
     const { signOut } = React.useContext(AuthenticationContext)
-    
+
     return (
         <View style={{ flex: 1 }}>
             <DrawerContentScrollView {...props}>
@@ -64,12 +64,12 @@ export function DrawerContent(props) {
                         <DrawerItem
                             icon={({ color, size }) => (
                                 <Icon
-                                    name="account"
+                                    name="thumb-up"
                                     size={size}
                                     color={color} />
                             )}
-                            label="Profile"
-                            onPress={() => { props.navigation.navigate("ProfileScreen") }} />
+                            label="Safety Instruction"
+                            onPress={() => { props.navigation.navigate("InstructionScreen") }} />
 
                         <DrawerItem
                             icon={({ color, size }) => (
