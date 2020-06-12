@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useInterval } from 'react';
 
-import axios from 'axios'
+
 import {
-    SafeAreaView,
+
     StyleSheet,
     View,
     Text,
@@ -10,7 +10,7 @@ import {
 
 } from 'react-native';
 import Summary from './componentsScreen/Summary'
-import Icon from 'react-native-vector-icons/Ionicons'
+
 import LinearGradient from 'react-native-linear-gradient'
 
 export default HomeScreen = ({ navigation }) => {

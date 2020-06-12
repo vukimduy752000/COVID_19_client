@@ -1,6 +1,6 @@
 import React from 'react'
-import { Text, FlatList, StyleSheet, TouchableOpacity, View } from 'react-native'
-import { Card, Title, Paragraph, Avatar } from 'react-native-paper';
+import {  StyleSheet, TouchableOpacity, } from 'react-native'
+import { Card,  Paragraph, Avatar } from 'react-native-paper';
 import LinearGradient from 'react-native-linear-gradient'
 
 

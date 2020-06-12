@@ -1,5 +1,4 @@
 import React from 'react';
-import { Image } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';

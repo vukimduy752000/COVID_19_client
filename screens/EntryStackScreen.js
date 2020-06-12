@@ -1,11 +1,5 @@
 import React, { useState } from 'react'
 import {
-    View,
-    Text,
-    Button,
-    StyleSheet,
-    Image,
-    Key
 } from 'react-native'
 
 import { createStackNavigator } from '@react-navigation/stack'

@@ -1,19 +1,14 @@
 import React from 'react';
 import {
-    SafeAreaView,
+
     StyleSheet,
-    ScrollView,
+
     View,
-    StatusBar,
-    TabBarIOS,
+
     Text,
     Button
 } from 'react-native';
 
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-import { createDrawerNavigator } from '@react-navigation/drawer';
-import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import LinearGradient from 'react-native-linear-gradient'
 // Import external source Font Awesome
 import Icon from 'react-native-vector-icons/Ionicons'

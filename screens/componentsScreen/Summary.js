@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import { Text, ScrollView, FlatList, StyleSheet, TouchableOpacity, View } from 'react-native'
-import List from 'react-native-paper'
-import Icon from 'react-native-vector-icons/Ionicons'
+import { Text, ScrollView,  StyleSheet,  View } from 'react-native'
+
 import LinearGradient from 'react-native-linear-gradient'
 export default function Summary({ item }) {
     return (

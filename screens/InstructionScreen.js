@@ -1,13 +1,12 @@
 import React from 'react';
 import {
-    SafeAreaView,
+
     StyleSheet,
     View,
-    Text,
-    Button,
+
     Image,
     FlatList,
-    TouchableOpacity,
+
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient'
 

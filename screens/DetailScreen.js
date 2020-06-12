@@ -3,16 +3,12 @@ import {
     StyleSheet,
     View,
     Text,
-    SafeAreaView,
+
     ScrollView,
 } from 'react-native';
 
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-import { createDrawerNavigator } from '@react-navigation/drawer';
-import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import LinearGradient from 'react-native-linear-gradient'
-import { List } from 'react-native-paper';
+
 // Import external source Font Awesome
 
 

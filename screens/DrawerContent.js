@@ -1,5 +1,5 @@
 import React, { userState, useEffect } from 'react';
-import { View, Text, StyleSheet } from 'react-native'
+import { View,  StyleSheet } from 'react-native'
 import { DrawerContentScrollView, DrawerItem } from '@react-navigation/drawer';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 import {AuthenticationContext} from '../components/context'
@@ -10,8 +10,6 @@ import {
     Caption,
     Paragraph,
     Drawer,
-    TouchableRipple,
-    Switch,
 } from 'react-native-paper'
 
 export function DrawerContent(props) {

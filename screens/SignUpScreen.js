@@ -1,9 +1,9 @@
 import React, { useState, Children } from 'react'
 import {
     View,
-    Text,
+
     StyleSheet,
-    Image,
+
     TouchableWithoutFeedback,
     Keyboard
 } from 'react-native'

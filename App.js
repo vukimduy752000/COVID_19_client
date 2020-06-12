@@ -1,19 +1,10 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import {
-  SafeAreaView,
   StyleSheet,
-  ScrollView,
-  View,
-  StatusBar,
-  TabBarIOS,
-  Text,
-  Button
 } from 'react-native';
 
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import AsyncStorage from '@react-native-community/async-storage'
 
 import MainTabBar from './screens/MainTabBar'
@@ -82,7 +73,7 @@ const App = () => {
   return (
     <AuthenticationContext.Provider value={authContext}>
       <NavigationContainer>
-        {userToken == null ? (
+        {userToken !== null ? (
           <Drawer.Navigator drawerContent={props => <DrawerContent {...props} />}>
             <Drawer.Screen name="customDrawerTabbar" component={MainTabBar} />
           </Drawer.Navigator>
@@ -96,11 +87,7 @@ const App = () => {
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: 'center',
-  }
+
 });
 
 export default App

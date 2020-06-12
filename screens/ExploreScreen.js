@@ -1,22 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import {
-    SafeAreaView,
+
     StyleSheet,
-    ScrollView,
+
     View,
-    StatusBar,
-    TabBarIOS,
+
     Text,
-    Button,
+
     FlatList,
     ActivityIndicator,
 } from 'react-native';
 
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
 import LinearGradient from 'react-native-linear-gradient'
-import { createDrawerNavigator } from '@react-navigation/drawer';
-import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import Country from './componentsScreen/Country'
 
 // Import external source Font Awesome

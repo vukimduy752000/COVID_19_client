@@ -1,9 +1,9 @@
-import React, { useState, Children } from 'react'
+import React, { useState} from 'react'
 import {
     View,
-    Text,
+   
     StyleSheet,
-    Image,
+  
     TouchableWithoutFeedback,
     Keyboard,
     Alert
@@ -11,7 +11,7 @@ import {
 import { TextInput, Avatar, Button } from 'react-native-paper'
 import { AuthenticationContext } from '../components/context'
 import Users from './DataSource/Users'
-import LinearGradient from'react-native-linear-gradient'
+
 
 const LogInScreen = ({ navigation }) => {
     const [userData, setUserData] = useState({
